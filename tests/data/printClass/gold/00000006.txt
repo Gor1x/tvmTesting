@@ -1,0 +1,38 @@
+AAAA 1
+Version 60.0
+
+Constant Pool size 15
+1: Tag 10 MethodRef Class index 2, Name and type index 3
+2: Tag 7 Class Name index 4
+3: Tag 12 NameAndType Name index 5, Description index 6
+4: Tag 1 Utf8 Value "java/lang/Object"
+5: Tag 1 Utf8 Value "<init>"
+6: Tag 1 Utf8 Value "()V"
+7: Tag 7 Class Name index 8
+8: Tag 1 Utf8 Value "F"
+9: Tag 1 Utf8 Value "f"
+10: Tag 1 Utf8 Value "I"
+11: Tag 1 Utf8 Value "Code"
+12: Tag 1 Utf8 Value "LineNumberTable"
+13: Tag 1 Utf8 Value "SourceFile"
+14: Tag 1 Utf8 Value "F.java"
+
+Flags: decimal 32, hex 0020, binary 0000000000100000 super
+
+This class: id 7, name F
+
+Super class: id 2, name java.lang.Object
+
+No interfaces
+
+Field name f (index 9), type I (descriptor index 10)
+Human type: int
+Flags: decimal 2, hex 0002, binary 0000000000000010 private
+No field attributes
+
+Method name <init> (index 5), type ()V (descriptor index 6)
+Human type: (): void
+Flags: decimal 0, hex 0000, binary 0000000000000000
+Method attribute name Code, size 29
+
+Class attribute name SourceFile, size 2

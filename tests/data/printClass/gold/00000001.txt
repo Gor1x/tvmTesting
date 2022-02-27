@@ -1,0 +1,80 @@
+AAAA 1
+Version 60.0
+
+Constant Pool size 29
+1: Tag 10 MethodRef Class index 2, Name and type index 3
+2: Tag 7 Class Name index 4
+3: Tag 12 NameAndType Name index 5, Description index 6
+4: Tag 1 Utf8 Value "java/lang/Object"
+5: Tag 1 Utf8 Value "<init>"
+6: Tag 1 Utf8 Value "()V"
+7: Tag 7 Class Name index 8
+8: Tag 1 Utf8 Value "Primitive"
+9: Tag 1 Utf8 Value "b"
+10: Tag 1 Utf8 Value "B"
+11: Tag 1 Utf8 Value "c"
+12: Tag 1 Utf8 Value "C"
+13: Tag 1 Utf8 Value "d"
+14: Tag 1 Utf8 Value "D"
+15: Tag 1 Utf8 Value "f"
+16: Tag 1 Utf8 Value "F"
+17: Tag 1 Utf8 Value "i"
+18: Tag 1 Utf8 Value "I"
+19: Tag 1 Utf8 Value "l"
+20: Tag 1 Utf8 Value "J"
+21: Tag 1 Utf8 Value "s"
+22: Tag 1 Utf8 Value "S"
+23: Tag 1 Utf8 Value "bool"
+24: Tag 1 Utf8 Value "Z"
+25: Tag 1 Utf8 Value "Code"
+26: Tag 1 Utf8 Value "LineNumberTable"
+27: Tag 1 Utf8 Value "SourceFile"
+28: Tag 1 Utf8 Value "Primitive.java"
+
+Flags: decimal 32, hex 0020, binary 0000000000100000 super
+
+This class: id 7, name Primitive
+
+Super class: id 2, name java.lang.Object
+
+No interfaces
+
+Field name b (index 9), type B (descriptor index 10)
+Human type: byte
+Flags: decimal 0, hex 0000, binary 0000000000000000
+No field attributes
+Field name c (index 11), type C (descriptor index 12)
+Human type: char
+Flags: decimal 0, hex 0000, binary 0000000000000000
+No field attributes
+Field name d (index 13), type D (descriptor index 14)
+Human type: double
+Flags: decimal 0, hex 0000, binary 0000000000000000
+No field attributes
+Field name f (index 15), type F (descriptor index 16)
+Human type: float
+Flags: decimal 0, hex 0000, binary 0000000000000000
+No field attributes
+Field name i (index 17), type I (descriptor index 18)
+Human type: int
+Flags: decimal 0, hex 0000, binary 0000000000000000
+No field attributes
+Field name l (index 19), type J (descriptor index 20)
+Human type: long
+Flags: decimal 0, hex 0000, binary 0000000000000000
+No field attributes
+Field name s (index 21), type S (descriptor index 22)
+Human type: short
+Flags: decimal 0, hex 0000, binary 0000000000000000
+No field attributes
+Field name bool (index 23), type Z (descriptor index 24)
+Human type: boolean
+Flags: decimal 0, hex 0000, binary 0000000000000000
+No field attributes
+
+Method name <init> (index 5), type ()V (descriptor index 6)
+Human type: (): void
+Flags: decimal 0, hex 0000, binary 0000000000000000
+Method attribute name Code, size 29
+
+Class attribute name SourceFile, size 2

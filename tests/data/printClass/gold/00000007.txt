@@ -1,0 +1,44 @@
+AAAA 1
+Version 60.0
+
+Constant Pool size 17
+1: Tag 10 MethodRef Class index 2, Name and type index 3
+2: Tag 7 Class Name index 4
+3: Tag 12 NameAndType Name index 5, Description index 6
+4: Tag 1 Utf8 Value "java/lang/Object"
+5: Tag 1 Utf8 Value "<init>"
+6: Tag 1 Utf8 Value "()V"
+7: Tag 7 Class Name index 8
+8: Tag 1 Utf8 Value "Arrays"
+9: Tag 1 Utf8 Value "b"
+10: Tag 1 Utf8 Value "[B"
+11: Tag 1 Utf8 Value "c"
+12: Tag 1 Utf8 Value "[[C"
+13: Tag 1 Utf8 Value "Code"
+14: Tag 1 Utf8 Value "LineNumberTable"
+15: Tag 1 Utf8 Value "SourceFile"
+16: Tag 1 Utf8 Value "Arrays.java"
+
+Flags: decimal 32, hex 0020, binary 0000000000100000 super
+
+This class: id 7, name Arrays
+
+Super class: id 2, name java.lang.Object
+
+No interfaces
+
+Field name b (index 9), type [B (descriptor index 10)
+Human type: byte[]
+Flags: decimal 0, hex 0000, binary 0000000000000000
+No field attributes
+Field name c (index 11), type [[C (descriptor index 12)
+Human type: char[][]
+Flags: decimal 0, hex 0000, binary 0000000000000000
+No field attributes
+
+Method name <init> (index 5), type ()V (descriptor index 6)
+Human type: (): void
+Flags: decimal 0, hex 0000, binary 0000000000000000
+Method attribute name Code, size 29
+
+Class attribute name SourceFile, size 2

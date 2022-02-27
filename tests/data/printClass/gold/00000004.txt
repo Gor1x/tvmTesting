@@ -1,0 +1,36 @@
+AAAA 1
+Version 60.0
+
+Constant Pool size 15
+1: Tag 10 MethodRef Class index 2, Name and type index 3
+2: Tag 7 Class Name index 4
+3: Tag 12 NameAndType Name index 5, Description index 6
+4: Tag 1 Utf8 Value "java/lang/Object"
+5: Tag 1 Utf8 Value "<init>"
+6: Tag 1 Utf8 Value "()V"
+7: Tag 7 Class Name index 8
+8: Tag 1 Utf8 Value "AbstractAction"
+9: Tag 7 Class Name index 10
+10: Tag 1 Utf8 Value "java/lang/Runnable"
+11: Tag 1 Utf8 Value "Code"
+12: Tag 1 Utf8 Value "LineNumberTable"
+13: Tag 1 Utf8 Value "SourceFile"
+14: Tag 1 Utf8 Value "AbstractAction.java"
+
+Flags: decimal 1056, hex 0420, binary 0000010000100000 super abstract
+
+This class: id 7, name AbstractAction
+
+Super class: id 2, name java.lang.Object
+
+Implements class ids 9
+Implements names java.lang.Runnable
+
+No fields
+
+Method name <init> (index 5), type ()V (descriptor index 6)
+Human type: (): void
+Flags: decimal 0, hex 0000, binary 0000000000000000
+Method attribute name Code, size 29
+
+Class attribute name SourceFile, size 2

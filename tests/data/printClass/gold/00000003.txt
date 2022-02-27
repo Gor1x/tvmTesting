@@ -1,0 +1,56 @@
+AAAA 1
+Version 60.0
+
+Constant Pool size 20
+1: Tag 10 MethodRef Class index 2, Name and type index 3
+2: Tag 7 Class Name index 4
+3: Tag 12 NameAndType Name index 5, Description index 6
+4: Tag 1 Utf8 Value "java/lang/Object"
+5: Tag 1 Utf8 Value "<init>"
+6: Tag 1 Utf8 Value "()V"
+7: Tag 7 Class Name index 8
+8: Tag 1 Utf8 Value "Methods"
+9: Tag 1 Utf8 Value "Code"
+10: Tag 1 Utf8 Value "LineNumberTable"
+11: Tag 1 Utf8 Value "main"
+12: Tag 1 Utf8 Value "([Ljava/lang/String;)V"
+13: Tag 1 Utf8 Value "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Math;"
+14: Tag 1 Utf8 Value "m"
+15: Tag 1 Utf8 Value "([C[[I)[[I"
+16: Tag 1 Utf8 Value "m2"
+17: Tag 1 Utf8 Value "([Ljava/lang/Object;[[Ljava/lang/String;)[[Ljava/lang/String;"
+18: Tag 1 Utf8 Value "SourceFile"
+19: Tag 1 Utf8 Value "Method.java"
+
+Flags: decimal 1056, hex 0420, binary 0000010000100000 super abstract
+
+This class: id 7, name Methods
+
+Super class: id 2, name java.lang.Object
+
+No interfaces
+
+No fields
+
+Method name <init> (index 5), type ()V (descriptor index 6)
+Human type: (): void
+Flags: decimal 0, hex 0000, binary 0000000000000000
+Method attribute name Code, size 29
+Method name main (index 11), type ([Ljava/lang/String;)V (descriptor index 12)
+Human type: (java.lang.String[]): void
+Flags: decimal 0, hex 0000, binary 0000000000000000
+Method attribute name Code, size 25
+Method name main (index 11), type (Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Math; (descriptor index 13)
+Human type: (java.lang.String, java.lang.Object): java.lang.Math
+Flags: decimal 0, hex 0000, binary 0000000000000000
+Method attribute name Code, size 26
+Method name m (index 14), type ([C[[I)[[I (descriptor index 15)
+Human type: (char[], int[][]): int[][]
+Flags: decimal 1024, hex 0400, binary 0000010000000000 abstract
+No method attributes
+Method name m2 (index 16), type ([Ljava/lang/Object;[[Ljava/lang/String;)[[Ljava/lang/String; (descriptor index 17)
+Human type: (java.lang.Object[], java.lang.String[][]): java.lang.String[][]
+Flags: decimal 1024, hex 0400, binary 0000010000000000 abstract
+No method attributes
+
+Class attribute name SourceFile, size 2

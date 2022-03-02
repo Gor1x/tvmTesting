@@ -1,5 +1,7 @@
 #pragma once
 
+#include <memory>
+
 #include "methodData.h"
 #include "method.h"
 #include "attributeData.h"
@@ -40,12 +42,18 @@ public:
 
     std::shared_ptr<Method> build(std::shared_ptr<CPool::Entity> cpool) {
         /**
-         * TODO: create Method instance here and return shared pointer to its instance
-         *
          * pretty much the same as for Field. Look at field builder for details
          */
+        auto name = cpool->ascii(_data.nameIndex);
+        auto descr = cpool->ascii(_data.descriptorIndex);
+        auto flags = _data.flags;
 
-        return std::shared_ptr<Method>(new Method{name, descr, flags, attributes});
+        std::vector<Attribute> attributes;
+        for (const auto& g : _data.attributes) {
+            attributes.emplace_back(cpool->ascii(g.nameIndex), g.size, g.body);
+        }
+
+        return std::make_shared<Method>(name, descr, flags, attributes);
     }
 
     MethodData data() {

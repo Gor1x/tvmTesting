@@ -1,5 +1,7 @@
 #pragma once
 
+#include <memory>
+
 #include "fieldData.h"
 #include "field.h"
 #include "attributeData.h"
@@ -39,16 +41,22 @@ public:
 
     std::shared_ptr<Field> build(std::shared_ptr<CPool::Entity> cpool) {
         /**
-         * TODO: create Field instance here and return shared pointer to its instance
-         *
          * You need to prepare name, type descriptor, flags and attributes
          * For name and descriptor you need to obtain string representation
          * based on there ids and constant pool data
          *
          * You also need to resolve name of each attribute
          */
+        auto name = cpool->ascii(_data.nameIndex);
+        auto descr = cpool->ascii(_data.descriptorIndex);
+        auto flags = _data.flags;
 
-        return std::shared_ptr<Field>(new Field{name, descr, flags, attributes});
+        std::vector<Attribute> attributes;
+        for (const auto& g : _data.attributes) {
+            attributes.emplace_back(cpool->ascii(g.nameIndex), g.size, g.body);
+        }
+
+        return std::make_shared<Field>(name, descr, flags, attributes);
     }
 
     FieldData data() {

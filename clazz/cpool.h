@@ -32,7 +32,7 @@ namespace CPool {
         u2 _size;
 
     public:
-        Entity(CPool::Data data, u2 size): _data{data}, _size{size} {
+        Entity(CPool::Data data, u2 size) : _data{data}, _size{size} {
         }
 
         u2 size() {
@@ -63,7 +63,7 @@ namespace CPool {
             return _data._stringEntries.find(index)->second;
         }
 
-        std::string ascii(u2 index){
+        std::string ascii(u2 index) {
             return _data._utf8Entries.find(index)->second;
         }
 
@@ -71,7 +71,7 @@ namespace CPool {
             return _data._utf8EntriesWide.find(index) != _data._utf8EntriesWide.end();
         }
 
-        std::u16string wideString(u2 index){
+        std::u16string wideString(u2 index) {
             return _data._utf8EntriesWide.find(index)->second;
         }
 
@@ -122,6 +122,7 @@ namespace CPool {
 
                It should use some of above defined methods as helpers
              */
+            return ascii(index);
         }
 
     };

@@ -73,10 +73,6 @@ std::shared_ptr<Clazz> ClassReader::readClass() {
         builder.attribute(readAttributeData());
     }
     /*
-     * TODO: implement reading other
-     *   elements of class file and call relevant builder
-     *   method
-     *
      *  For interfaces method you must pass vector of constant
      *  pool indices
      *
@@ -188,8 +184,6 @@ std::shared_ptr<CPool::Entity> ClassReader::readCPool() {
         }
     }
     /*
-     * TODO:
-     *  call one of CPool::Builder's method for each constant pool entry
      * use 'read' or 'fill' methods to get file contents
      *
      * Mapping between constant pool tag and

@@ -12,23 +12,28 @@ public:
     FieldBuilder() {
     }
 
-    FieldBuilder& flags(u2 value) {
+    FieldBuilder &flags(u2 value) {
         _data.flags = FieldFlags{value};
         return *this;
     }
 
-    FieldBuilder& nameIndex(u2 value) {
+    FieldBuilder &nameIndex(u2 value) {
         _data.nameIndex = value;
         return *this;
     }
 
-    FieldBuilder& descriptorIndex(u2 value) {
+    FieldBuilder &descriptorIndex(u2 value) {
         _data.descriptorIndex = value;
         return *this;
     }
 
-    FieldBuilder& attribute(u2 nameIndex, u4 size, std::shared_ptr<u1> data) {
+    FieldBuilder &attribute(u2 nameIndex, u4 size, std::shared_ptr<u1> data) {
         _data.attributes.push_back(AttributeData{nameIndex, size, data});
+        return *this;
+    }
+
+    FieldBuilder &attribute(AttributeData data) {
+        _data.attributes.push_back(data);
         return *this;
     }
 
@@ -41,7 +46,7 @@ public:
          * based on there ids and constant pool data
          *
          * You also need to resolve name of each attribute
-         */ 
+         */
 
         return std::shared_ptr<Field>(new Field{name, descr, flags, attributes});
     }

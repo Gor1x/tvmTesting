@@ -3,6 +3,7 @@
 #include "methodData.h"
 #include "method.h"
 #include "attributeData.h"
+#include "cpool.h"
 
 class MethodBuilder {
 private:
@@ -12,23 +13,28 @@ public:
     MethodBuilder() {
     }
 
-    MethodBuilder& flags(u2 value) {
+    MethodBuilder &flags(u2 value) {
         _data.flags = MethodFlags{value};
         return *this;
     }
 
-    MethodBuilder& nameIndex(u2 value) {
+    MethodBuilder &nameIndex(u2 value) {
         _data.nameIndex = value;
         return *this;
     }
 
-    MethodBuilder& descriptorIndex(u2 value) {
+    MethodBuilder &descriptorIndex(u2 value) {
         _data.descriptorIndex = value;
         return *this;
     }
 
-    MethodBuilder& attribute(u2 nameIndex, u4 size, std::shared_ptr<u1> data) {
+    MethodBuilder &attribute(u2 nameIndex, u4 size, std::shared_ptr<u1> data) {
         _data.attributes.push_back(AttributeData{nameIndex, size, data});
+        return *this;
+    }
+
+    MethodBuilder &attribute(AttributeData data) {
+        _data.attributes.push_back(data);
         return *this;
     }
 

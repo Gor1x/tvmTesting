@@ -69,6 +69,8 @@ private:
 
     std::shared_ptr<CPool::Entity> readCPool();
 
+    AttributeData readAttributeData();
+
 public:
 
     ClassReader(std::string fileName) : _fileName{fileName}, _isFailed{false} {

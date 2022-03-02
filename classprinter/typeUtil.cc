@@ -1,35 +1,64 @@
 #include "typeUtil.h"
 #include <iostream>
 
+std::vector<std::string> readFieldTypes(std::string descriptor) {
+    std::vector<std::string> result;
+
+    auto descriptorIterator = descriptor.begin();
+    while (descriptorIterator != descriptor.end()) {
+
+        std::string arrayPart;
+        while (descriptorIterator != descriptor.end() && *descriptorIterator == '[')
+            arrayPart += "[]";
+
+        std::string currentType;
+
+        if (*descriptorIterator == 'L') {
+            descriptorIterator++;
+            while (*descriptorIterator != ';') {
+                currentType += *descriptorIterator;
+                descriptorIterator++;
+            }
+        }
+        if (*descriptorIterator == 'B')
+            currentType = "byte";
+        if (*descriptorIterator == 'C')
+            currentType = "char";
+        if (*descriptorIterator == 'D')
+            currentType = "double";
+        if (*descriptorIterator == 'F')
+            currentType = "float";
+        if (*descriptorIterator == 'I')
+            currentType = "int";
+        if (*descriptorIterator == 'J')
+            currentType = "long";
+        if (*descriptorIterator == 'S')
+            currentType = "short";
+        if (*descriptorIterator == 'Z')
+            currentType = "boolean";
+        if (*descriptorIterator == 'V')
+            currentType = "void";
+        descriptorIterator++;
+        result.push_back(currentType + arrayPart);
+    }
+    return result;
+}
+
 FieldSignature TypeUtil::field_external(std::string descriptor) {
-   /** TODO:
-       implement conversion of type descriptor
-       to human type.
-
-       FieldSignature should be:
-       * "int", "boolean", "char" etc. if descriptor is JVM descriptor of corresponding
-         primitive type
-       * convential type name if descriptor is JVM descriptor of one of reference types
-         (for example, it must return "java.lang.String" if it is descriptor of
-          such class)
-       * <typename>[] if descriptor is JVM descriptor of array type and return value
-         for type of array element would be <typename>
-   */
-
-   return {""};
+    return {readFieldTypes(descriptor)[0]};
 }
 
 MethodSignature TypeUtil::method_external(std::string descriptor) {
-   /** TODO:
-       implement conversion of type descriptor
-       to human type.
+    int splitPos = descriptor.find(')');
+    std::string params = descriptor.substr(1, splitPos - 1);
+    std::string returnType = descriptor.substr(splitPos + 1);
 
-       MethodSignature's fields should be:
-       * vector of parameter types, where each position corresponds with each method parameter
-         and is the same that would be returned by field_external some corresponding description
-       * return type in human form (the same as it would be for field_external)
-   */
+    /**         MethodSignature's fields should be:
+        * vector of parameter types, where each position corresponds with each method parameter
+          and is the same that would be returned by field_external some corresponding description
+        * return type in human form (the same as it would be for field_external)
+    */
 
-    return {{}, ""};
+    return {readFieldTypes(params), readFieldTypes(returnType)[0]};
 }
 

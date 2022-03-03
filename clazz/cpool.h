@@ -122,7 +122,7 @@ namespace CPool {
 
                It should use some of above defined methods as helpers
              */
-            return ascii(index);
+            return ascii(nameIndex(index));
         }
 
     };

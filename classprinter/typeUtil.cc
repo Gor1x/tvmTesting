@@ -50,6 +50,9 @@ FieldSignature TypeUtil::field_external(std::string descriptor) {
 
 MethodSignature TypeUtil::method_external(std::string descriptor) {
     int splitPos = descriptor.find(')');
+    if (splitPos == -1) {
+        return {{""}, ""};
+    }
     std::string params = descriptor.substr(1, splitPos - 1);
     std::string returnType = descriptor.substr(splitPos + 1);
 

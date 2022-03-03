@@ -94,7 +94,7 @@ std::shared_ptr<Clazz> ClassReader::readClass() {
 }
 
 std::shared_ptr<CPool::Entity> ClassReader::readCPool() {
-    uint16_t cpCount = read<uint16_t>();
+    u2 cpCount = read<u2>() - 1;
     CPool::Builder cpBuilder{cpCount};
     for (int i = 0; i < cpCount; i++) {
         u1 tag = read<u1>();

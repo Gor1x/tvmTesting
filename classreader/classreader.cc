@@ -100,7 +100,7 @@ std::shared_ptr<CPool::Entity> ClassReader::readCPool() {
         u1 tag = read<u1>();
         switch (tag) {
             case CPool::Tag_Integer: {
-                cpBuilder.const_integer(read<s4>());
+                cpBuilder.const_integer(read<u4>());
             }
                 break;
 
@@ -110,12 +110,16 @@ std::shared_ptr<CPool::Entity> ClassReader::readCPool() {
                 break;
 
             case CPool::Tag_Long: {
-                cpBuilder.const_long(read<int64_t>());
+                auto high = read<u4>();
+                auto low = read<u4>();
+                cpBuilder.const_long(((long long) high << 32) + low);
             }
                 break;
 
             case CPool::Tag_Double: {
-                cpBuilder.const_double(read<u8>());
+                auto high = read<u4>();
+                auto low = read<u4>();
+                cpBuilder.const_double(((long long) high << 32) + low);
             }
                 break;
 

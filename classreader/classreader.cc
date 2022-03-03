@@ -28,10 +28,24 @@ std::shared_ptr<Clazz> ClassReader::readClass() {
     u2 major = read<u2>();
 
     builder.version({major, minor});
-    builder.cpool(readCPool());
-    builder.flags(read<u2>());
-    builder.thisClass(read<u2>());
-    builder.superClass(read<u2>());
+    {
+        auto pool = readCPool();
+        builder.cpool(readCPool());
+    }
+
+    {
+        u2 flag = read<u2>();
+        builder.flags(flag);
+
+
+        u2 thisClass = read<u2>();
+        builder.thisClass(thisClass);
+
+
+        u2 superClass = read<u2>();
+        builder.superClass(superClass);
+    }
+
 
     u2 interfacesCount = read<u2>();
     std::vector<u2> data(interfacesCount);
